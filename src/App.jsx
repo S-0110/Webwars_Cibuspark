@@ -1,8 +1,12 @@
 import React from 'react'
+import Threed from './hreed.jsx'
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Threed/>     
+    </div>
   )
 }
 
