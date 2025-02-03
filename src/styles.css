@@ -1,0 +1,181 @@
+/* Global Styles */
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+    color: black;
+}
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+    background-color: #de6464;
+  }
+  
+  
+
+ .images .bgimg {
+    background-position: center;
+    background-size: cover;
+    /* background-image: url("./assets/food.mp4"); */
+    min-height: 45em;
+  }
+  .bgimg video{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    background-color: black;
+    padding: 16px;
+    justify-content: space-between;
+  }
+  
+  .navbar-link a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    display: block;
+  }
+  
+  .navbar-link a:hover {
+    background-color: #333;
+  }
+  
+  /* Header */
+  .header-bottomleft, .header-middle, .header-bottomright {
+    position: absolute;
+  }
+  
+  .header-bottomleft {
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .header-middle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .header-bottomright {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .header-text {
+    color: white;
+    font-size: 90px;
+    text-align: center;
+  }
+  
+  .header-tag {
+    color: white;
+    /* background-color: black; */
+    padding: 8px;
+  }
+  
+  /* Container and Content */
+  .container {
+    background-color: #f4f4f4;
+    padding: 32px 0;
+  }
+  
+  .content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .panel {
+    border-left: 5px solid #ccc;
+    padding: 16px;
+    background-color: #f9f9f9;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 16px;
+  }
+  
+  form input, form button {
+    padding: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Menu Section */
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tab {
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    flex: 1;
+  }
+  
+  .tab.active {
+    background-color: #333;
+    color: white;
+  }
+  
+  .menu-section {
+    padding: 16px;
+    background-color: #fff;
+    margin-top: 32px;
+  }
+  
+  .menu-section h5 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .menu-section p {
+    color: #666;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 48px;
+    font-size: large;
+  }
+  
+  footer a {
+    color: green;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  .harsh{
+    /* background-color: rgba(146, 140, 140, 0.422); */
+    color: rgba(0, 0, 0, 0.51);
+    font-size: 8em;
+    font-weight: 900;
+  }

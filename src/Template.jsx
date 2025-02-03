@@ -1,71 +1,84 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import './styles.css';
+import Navbar from './Navbar.jsx'
+import Header from './Header.jsx'
+import About from './About.jsx'
+// import Menu from './menu.jsx'
 
-const Cafe = () => {
-  const [activeMenu, setActiveMenu] = useState('Eat');
+const Template = () => {
+  const [activeMenu, setActiveMenu] = useState("Eat");
+
+  const openMenu = (menuName) => {
+    setActiveMenu(menuName);
+  };
 
   return (
     <div>
-      <div className="top-nav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#menu">MENU</a>
-        <a href="#where">WHERE</a>
-      </div>
+      {/* Navbar */}
+      <Navbar/>      
 
-      <header className="bgimg" id="home">
-        <div className="overlay">Open from 6am to 5pm</div>
-        <div className="center-text">the<br />Cafe</div>
-        <div className="overlay right">15 Adr street, 5015</div>
-      </header>
+      {/* Header */}
+      <Header/>
 
-      <div className="container" id="about">
-        <h2>ABOUT THE CAFE</h2>
-        <p>The Cafe was founded by Mr. Smith...</p>
-        <blockquote>"Use products from nature for what it's worth - but never too early, nor too late." - Liam Brown</blockquote>
-        <img src="/w3images/coffeeshop.jpg" alt="Cafe" className="image" />
-        <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-        <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
-      </div>
+      {/* About Section */}
+      <About/>
+      
 
+      {/* Menu Section */}
+      
       <div className="container" id="menu">
-        <h2>THE MENU</h2>
-        <div className="menu-tabs">
-          <button onClick={() => setActiveMenu('Eat')} className={activeMenu === 'Eat' ? 'active' : ''}>Eat</button>
-          <button onClick={() => setActiveMenu('Drink')} className={activeMenu === 'Drink' ? 'active' : ''}>Drink</button>
+        <div className="content">
+          <h5 className="section-title">THE MENU</h5>
+          <div className="tabs">
+            <div className={`tab ${activeMenu === 'Eat' ? 'active' : ''}`} onClick={() => openMenu('Eat')}>
+              Eat
+            </div>
+            <div className={`tab ${activeMenu === 'Drinks' ? 'active' : ''}`} onClick={() => openMenu('Drinks')}>
+              Drink
+            </div>
+          </div>
+
+          {/* Eat Menu */}
+          <div>  {activeMenu === 'Eat' && (
+        <div className="menu-section">
+          <h5>Bread Basket</h5>
+          <p>Assortment of fresh baked fruit breads and muffins 5.50</p>
+          <h5>Honey Almond Granola with Fruits</h5>
+          <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+          <h5>Belgian Waffle</h5>
+          <p>Vanilla flavored batter with malted flour 7.50</p>
+          <h5>Scrambled eggs</h5>
+          <p>Scrambled eggs with green onions 7.50</p>
+          <h5>Blueberry Pancakes</h5>
+          <p>With syrup, butter and lots of berries 8.50</p>
         </div>
-        {activeMenu === 'Eat' && (
-          <div className="menu-content">
-            <h3>Bread Basket</h3>
-            <p>Assortment of fresh baked fruit breads and muffins - $5.50</p>
-          </div>
-        )}
-        {activeMenu === 'Drink' && (
-          <div className="menu-content">
-            <h3>Coffee</h3>
-            <p>Regular coffee - $2.50</p>
-          </div>
-        )}
+      )}</div>
+
+          {/* Drinks Menu */}
+          {activeMenu === 'Drinks' && (
+            <div className="menu-section">
+              <h5>Coffee</h5>
+              <p>Regular coffee 2.50</p>
+              <h5>Chocolato</h5>
+              <p>Chocolate espresso with milk 4.50</p>
+              <h5>Corretto</h5>
+              <p>Whiskey and coffee 5.00</p>
+              <h5>Iced tea</h5>
+              <p>Hot tea, except not hot 3.00</p>
+              <h5>Soda</h5>
+              <p>Coke, Sprite, Fanta, etc. 2.50</p>
+            </div>
+          )}
+        </div>
       </div>
 
-      <div className="container" id="where">
-        <h2>WHERE TO FIND US</h2>
-        <p>Find us at some address...</p>
-        <img src="/w3images/map.jpg" alt="Map" className="image" />
-        <form>
-          <input type="text" placeholder="Name" required />
-          <input type="number" placeholder="How many people" required />
-          <input type="datetime-local" required />
-          <input type="text" placeholder="Message / Special requirements" required />
-          <button type="submit">SEND MESSAGE</button>
-        </form>
-      </div>
+      {/* Contact Section */}
+     
 
-      <footer>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" rel="noopener noreferrer">w3.css</a></p>
-      </footer>
+      {/* Footer */}
+    
     </div>
   );
 };
 
-export default Cafe;
+export default Template;

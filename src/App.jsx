@@ -1,11 +1,13 @@
 import React from 'react'
 import Threed from './hreed.jsx'
+import Template from './Template.jsx'
 
 
 const App = () => {
   return (
     <div>
-      <Threed/>     
+      <Template/>    
+      <Threed/> 
     </div>
   )
 }
