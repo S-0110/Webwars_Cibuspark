@@ -5,9 +5,9 @@ import Spline from '@splinetool/react-spline';
 export default function hreed() {
   return (
     <div className='logo'>
-       <strike>
-       <Spline scene="https://prod.spline.design/kW4D3creaqVLNFz8/scene.splinecode" />
-       </strike>
+       <strikemode>
+       <Spline scene="https://prod.spline.design/3f55sTPzV4zBnwED/scene.splinecode" />
+       </strikemode>
     </div>
     );
 }

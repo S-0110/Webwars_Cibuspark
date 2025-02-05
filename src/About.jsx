@@ -1,24 +1,24 @@
 import React from 'react'
-import './styles.css';
+import './css/home.css';
 
-
-const About = () => {
+const Home = () => {
   return (
-    <div><div className="container" id="about">
-    <div className="content">
-      <h5 className="section-title">ABOUT THE CAFE</h5>
-      <p>The Cafe was founded in blabla by Mr. Smith...</p>
-      <p>We serve fresh made-to-order breakfast...</p>
-      <div className="panel">
-        <p><i>"Use products from nature for what it's worth..."</i></p>
-        <p>Chef, Coffeeist and Owner: Liam Brown</p>
-      </div>
-      <img src="./assets/2175358.png" alt="Cafe" />
-      <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-      <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+   <div className="homecon">
+     <div className='home'>
+        <div className="left">
+            <h1>How It Works
+            </h1>
+        </div>
+        <div className="right">
+            <p>Partnership with Hotels: We collaborate with hotels to identify and collect surplus food that is safe for processing.
+
+Efficient Collection: Our team ensures timely and hygienic collection of leftover food, minimizing waste and maintaining quality.
+
+Supply to Processing Units: The collected food is delivered to processing units specializing in converting organic waste into biofuels and other valuable products.</p>
+        </div>
     </div>
-  </div></div>
+   </div>
   )
 }
 
-export default About
+export default Home;

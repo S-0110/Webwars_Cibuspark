@@ -3,6 +3,7 @@ import './styles.css';
 import Navbar from './Navbar.jsx'
 import Header from './Header.jsx'
 import About from './About.jsx'
+import Home from './Homediv.jsx'
 // import Menu from './menu.jsx'
 
 const Template = () => {
@@ -20,6 +21,8 @@ const Template = () => {
       {/* Header */}
       <Header/>
 
+      {/* Home */}
+      <Home/>
       {/* About Section */}
       <About/>
       
@@ -28,45 +31,37 @@ const Template = () => {
       
       <div className="container" id="menu">
         <div className="content">
-          <h5 className="section-title">THE MENU</h5>
+          <h5 className="section-title">Contact Form</h5>
           <div className="tabs">
-            <div className={`tab ${activeMenu === 'Eat' ? 'active' : ''}`} onClick={() => openMenu('Eat')}>
-              Eat
+            <div className={`tab ${activeMenu === 'eat' ? 'active' : ''}`} onClick={() => openMenu('eat')}>
+              Customer
             </div>
             <div className={`tab ${activeMenu === 'Drinks' ? 'active' : ''}`} onClick={() => openMenu('Drinks')}>
-              Drink
+              Organization
             </div>
           </div>
 
           {/* Eat Menu */}
-          <div>  {activeMenu === 'Eat' && (
+          <div>  {activeMenu === 'eat' && (
         <div className="menu-section">
-          <h5>Bread Basket</h5>
-          <p>Assortment of fresh baked fruit breads and muffins 5.50</p>
-          <h5>Honey Almond Granola with Fruits</h5>
-          <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
-          <h5>Belgian Waffle</h5>
-          <p>Vanilla flavored batter with malted flour 7.50</p>
-          <h5>Scrambled eggs</h5>
-          <p>Scrambled eggs with green onions 7.50</p>
-          <h5>Blueberry Pancakes</h5>
-          <p>With syrup, butter and lots of berries 8.50</p>
+          <h5>Benefits for Hotels</h5>
+          <p>1. Waste Reduction: Decrease the volume of food waste sent to landfills, contributing to environmental conservation.</p>
+          <p>2. Cost Savings: Potentially lower waste disposal costs through our efficient collection services.</p>
+          <p>3. Sustainability Commitment: Enhance your hotel's reputation by participating in eco-friendly initiatives.</p>
+          
         </div>
       )}</div>
 
           {/* Drinks Menu */}
           {activeMenu === 'Drinks' && (
             <div className="menu-section">
-              <h5>Coffee</h5>
-              <p>Regular coffee 2.50</p>
-              <h5>Chocolato</h5>
-              <p>Chocolate espresso with milk 4.50</p>
-              <h5>Corretto</h5>
-              <p>Whiskey and coffee 5.00</p>
-              <h5>Iced tea</h5>
-              <p>Hot tea, except not hot 3.00</p>
-              <h5>Soda</h5>
-              <p>Coke, Sprite, Fanta, etc. 2.50</p>
+              <h5>Benefits for Food Processing Units:</h5>
+              <p>1. Reliable Supply: Access a consistent source of organic material suitable for biofuel production.
+              </p>
+              <p>2. Quality Assurance: Receive high-quality feedstock, ensuring optimal processing efficiency.
+              </p>
+              <p>3. Environmental Impact: Play a crucial role in reducing greenhouse gas emissions by diverting food waste from landfills.</p>
+             
             </div>
           )}
         </div>
