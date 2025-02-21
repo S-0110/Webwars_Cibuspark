@@ -1,15 +1,23 @@
 import React from 'react'
-import Threed from './hreed.jsx'
-import Template from './Template.jsx'
+// import Threed from './hreed.jsx'
+// import Loading from './Start.jsx'
+// import Loading from './loading.jsx'
+// import Hero from './hero.jsx'
 
 
-const App = () => {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Loading from "./loading.jsx";
+import MainPage from "./Template.jsx"; // Create a new component for the main page
+
+function App() {
   return (
-    <div>
-      <Template/>    
-      <Threed/> 
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Loading />} />
+        <Route path="/Template" element={<MainPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

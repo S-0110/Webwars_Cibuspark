@@ -1,77 +1,80 @@
-import React, { useState } from "react";
-import './styles.css';
-import Navbar from './Navbar.jsx'
-import Header from './Header.jsx'
-import About from './About.jsx'
-import Home from './Homediv.jsx'
-// import Menu from './menu.jsx'
+import React from "react";
+import "./css/styles.css";
+import imga from "./assets/light.jpg";
 
 const Template = () => {
-  const [activeMenu, setActiveMenu] = useState("Eat");
-
-  const openMenu = (menuName) => {
-    setActiveMenu(menuName);
-  };
-
   return (
-    <div>
-      {/* Navbar */}
-      <Navbar/>      
-
+    <div className="container">
       {/* Header */}
-      <Header/>
-
-      {/* Home */}
-      <Home/>
-      {/* About Section */}
-      <About/>
+      <header className="header">
+        <h1 className="logo">Cibuspark</h1>
+        <nav className="nav">
+          <a href="#">About</a>
+          <a href="#">Projects</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
       
-
-      {/* Menu Section */}
+      {/* Hero Section */}
+      <section className="hero">
+            <img src={imga} alt="" />
+        
+        <div className="overlay">
+         <h2>Junk to Joules</h2>
+         <p>Where Trash Sparks Innovation!</p>
+        </div>
+      </section>
       
-      <div className="container" id="menu">
-        <div className="content">
-          <h5 className="section-title">Contact Form</h5>
-          <div className="tabs">
-            <div className={`tab ${activeMenu === 'eat' ? 'active' : ''}`} onClick={() => openMenu('eat')}>
-              Customer
-            </div>
-            <div className={`tab ${activeMenu === 'Drinks' ? 'active' : ''}`} onClick={() => openMenu('Drinks')}>
-              Organization
-            </div>
+      {/* Stats Section
+      <section className="stats">
+        <div>
+          <h3>2000+</h3>
+          <p>Companies Served</p>
+        </div>
+        <div>
+          <h3>10+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div>
+          <h3>800+</h3>
+          <p>Hours of Digital Content</p>
+        </div>
+      </section> */}
+
+      {/* Services Section */}
+      <section className="services">
+        <h2>CIBUSPARK</h2>
+        <div className="service-grid">
+          <div className="service-card">
+           
+            <h3>HOTELS</h3>
+        <button>Know More</button>
           </div>
-
-          {/* Eat Menu */}
-          <div>  {activeMenu === 'eat' && (
-        <div className="menu-section">
-          <h5>Benefits for Hotels</h5>
-          <p>1. Waste Reduction: Decrease the volume of food waste sent to landfills, contributing to environmental conservation.</p>
-          <p>2. Cost Savings: Potentially lower waste disposal costs through our efficient collection services.</p>
-          <p>3. Sustainability Commitment: Enhance your hotel's reputation by participating in eco-friendly initiatives.</p>
-          
+          <div className="service-card">
+            <h3>FPUs</h3>
+            <button>Know More</button>
+          </div>
+          <div className="service-card">
+            <h3>Vision</h3>
+            <button>Know More</button>
+          </div>
+          <div className="service-card">
+            <h3>Our Team</h3>
+            <button>Know More</button>          </div>
         </div>
-      )}</div>
-
-          {/* Drinks Menu */}
-          {activeMenu === 'Drinks' && (
-            <div className="menu-section">
-              <h5>Benefits for Food Processing Units:</h5>
-              <p>1. Reliable Supply: Access a consistent source of organic material suitable for biofuel production.
-              </p>
-              <p>2. Quality Assurance: Receive high-quality feedstock, ensuring optimal processing efficiency.
-              </p>
-              <p>3. Environmental Impact: Play a crucial role in reducing greenhouse gas emissions by diverting food waste from landfills.</p>
-             
-            </div>
-          )}
-        </div>
-      </div>
-
+      </section>
+      
       {/* Contact Section */}
-     
-
+      <section className="contact">
+        <h2>Get in Touch Today!</h2>
+        <button className="cta">Contact Us</button>
+      </section>
+      
       {/* Footer */}
-    
+      <footer className="footer">
+        <p>© Cibuspark All Rights Reserved.</p>
+      </footer>
     </div>
   );
 };
