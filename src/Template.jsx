@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/styles.css";
-import imga from "./assets/light.jpg";
+import imga from "./assets/frame.jpg";
 
 const Template = () => {
   return (
@@ -9,10 +9,10 @@ const Template = () => {
       <header className="header">
         <h1 className="logo">Cibuspark</h1>
         <nav className="nav">
-          <a href="#">About</a>
-          <a href="#">Projects</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
+          <a href="./home">Home</a>
+          <a href="./hotel">Hotel</a>
+          <a href="./Fpu">Fpus</a>
+          <a href="/Team">Team</a>
         </nav>
       </header>
       
@@ -20,10 +20,7 @@ const Template = () => {
       <section className="hero">
             <img src={imga} alt="" />
         
-        <div className="overlay">
-         <h2>Junk to Joules</h2>
-         <p>Where Trash Sparks Innovation!</p>
-        </div>
+       
       </section>
       
       {/* Stats Section

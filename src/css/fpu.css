@@ -1,0 +1,50 @@
+/* fpu.css */
+
+.fpu {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  .fpu h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .fpu h2 {
+    font-size: 2rem;
+    color: #16a085;
+    margin-bottom: 20px;
+  }
+  
+  .fpu p {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  /* Style for check list */
+  .check-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .check-list li {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Icon styling */
+  .icon {
+    color: green;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }

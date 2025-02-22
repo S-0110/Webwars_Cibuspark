@@ -1,0 +1,68 @@
+/* team.css */
+
+.team {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  .team h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .team h2 {
+    font-size: 2rem;
+    color: #16a085;
+    margin-bottom: 20px;
+  }
+  
+  .team p {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  /* Style for core values list */
+  .core-values {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .core-values li {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Icon styling */
+  .icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  
+  .icon:nth-child(1) {
+    color: green; /* Sustainability */
+  }
+  
+  .icon:nth-child(2) {
+    color: #3498db; /* Collaboration */
+  }
+  
+  .icon:nth-child(3) {
+    color: #f39c12; /* Innovation */
+  }
+  
+  .join-mission {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #2c3e50;
+  }
