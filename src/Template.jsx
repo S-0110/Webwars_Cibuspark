@@ -1,10 +1,12 @@
 import React from "react";
 import "./css/styles.css";
 import imga from "./assets/frame.jpg";
+// import Navbar from "./Navbar.jsx"
 
 const Template = () => {
   return (
     <div className="container">
+      
       {/* Header */}
       <header className="header">
         <h1 className="logo">Cibuspark</h1>
@@ -23,21 +25,7 @@ const Template = () => {
        
       </section>
       
-      {/* Stats Section
-      <section className="stats">
-        <div>
-          <h3>2000+</h3>
-          <p>Companies Served</p>
-        </div>
-        <div>
-          <h3>10+</h3>
-          <p>Years Experience</p>
-        </div>
-        <div>
-          <h3>800+</h3>
-          <p>Hours of Digital Content</p>
-        </div>
-      </section> */}
+      
 
       {/* Services Section */}
       <section className="services">
@@ -46,26 +34,37 @@ const Template = () => {
           <div className="service-card">
            
             <h3>HOTELS</h3>
+            <a href="/hotel">
         <button>Know More</button>
+            </a>
           </div>
           <div className="service-card">
             <h3>FPUs</h3>
+            <a href="/fpu">
             <button>Know More</button>
+            </a>
           </div>
           <div className="service-card">
             <h3>Vision</h3>
+            <a href="/home">
             <button>Know More</button>
+            </a>
           </div>
           <div className="service-card">
             <h3>Our Team</h3>
-            <button>Know More</button>          </div>
+            <a href="/Team"> 
+            <button>Know More</button> 
+            </a> 
+            </div>
         </div>
       </section>
       
       {/* Contact Section */}
       <section className="contact">
         <h2>Get in Touch Today!</h2>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScEq1NlgwGrny1VzMRDoGdXyulhTGK7Zl56rPo1Q3hjn1IMCw/viewform?usp=dialog">
         <button className="cta">Contact Us</button>
+        </a>
       </section>
       
       {/* Footer */}
